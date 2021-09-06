@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>JQuery</title>
+    
+
+  </head>
+  <body>
+
+    <div class="container py-5 my-5">
+      <h1>click</h1>
+      <h2></h2>
+      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+    </div>
+
+
+    <div class="container py-5 my-5">
+      
+      <input type="text" placeholder="Your Name" id="name"><br>
+      <input type="text" placeholder="Your Email" id="email"><br>
+      <input type="text" placeholder="Contact Nmbr" id="nmbr"><br>
+      <button type="button">Show Information</button>
+      <h3></h3>
+    </div>
+
+
+    <div class="container py-5 my-5">
+      <input type="text" placeholder="Type a color" class="ok"><br>
+      <button type="button" class="change">Make body color</button>
+    </div>
+    
+
+    <div class="container py-5 my-5">
+      <ul class="nav">
+        <li class="p-2"><button class="btn btn-danger">Red</button></li>
+        <li class="p-2"><button class="btn btn-success">Green</button></li>
+        <li class="p-2"><button class="btn btn-primary">Blue</button></li>
+        <li class="p-2"><button class="btn btn-dark">Dark</button></li>
+        <li class="p-2"><button class="btn btn-warning">Yellow</button></li>
+      </ul>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+ <script>
+
+$(function(){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(".btn-danger").hover(function(){
+    $("body").css("background-color", "#b02a37")
+  })
+
+  $(".btn-success").hover(function(){
+    $("body").css("background-color", "#146c43")
+  })
+
+  $(".btn-primary").hover(function(){
+    $("body").css("background-color", "#0a58ca")
+  })
+
+  $(".btn-dark").hover(function(){
+    $("body").css("background-color", "#1c1f23")
+  })
+
+  $(".btn-warning").hover(function(){
+    $("body").css("background-color", "#ffcd39")
+  })
+})
+
+
+$(function(){
+  $(".change").click(function(){
+ 
+    var color= $(".ok").val();
+
+    $("body").css("background",color);
+  });
+})
+
+
+
+
+
+
+
+
+
+$(function(){
+   $("button").click(function(){
+    var a=$("#name").val();
+    var b=$("#email").val();
+    var c=$("#nmbr").val();
+        $("h3").html("Name:" +a+ "<br>"+"Email "+b+ "<br>"+"Phone Number"+c)
+   })
+})
+
+
+
+
+
+
+$(function(){
+
+  var a=3
+  var b=6
+  var c=a+b
+$("h2").text(c)
+})
+
+
+
+
+
+
+
+
+
+   $(function(){
+    $("h1").click(function(){
+      $("p").fadeOut()
+    })
+    
+   })
+ </script>
+
+
+
+
+
+
+  </body>
+  </html>
+    
